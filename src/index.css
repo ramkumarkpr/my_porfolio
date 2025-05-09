@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.navlink {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.nav-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.logo-text:hover {
+  color: #3b82f6;
+}
+
+.myName {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.insta-logo:hover {
+  color: #ec4899;
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.whatsapp-logo:hover {
+  color: green;
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.facebook-logo:hover {
+  color: #3b82f6;
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.twitter-logo:hover {
+  color: #3b82f6;
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+p {
+  font-style: italic;
+  line-height: height 1px;
+}
