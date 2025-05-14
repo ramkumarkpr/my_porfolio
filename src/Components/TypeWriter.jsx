@@ -41,7 +41,9 @@ const TypeWritter = () => {
             </h2>
             <p className="text-justify">
               A passionate{" "}
-              <span className="text-blue-500">Front-End Developer</span>{" "}
+              <span className="text-blue-500 font-bold">
+                Front-End Developer
+              </span>{" "}
               dedicated to crafting engaging and responsive user interfaces. I
               specialize in turning ideas into beautifully functional websites
               using modern technologies like HTML, CSS, JavaScript, and React.

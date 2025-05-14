@@ -16,22 +16,21 @@ const HeaderComponent = () => {
 
           <div className="">
             <ul className="flex gap-6 text-[18px] font-bold">
-              {/* <li className="nav-link">Home</li> */}
               <Link className="nav-link" to={"/"}>
                 Home
               </Link>
-              {/* <li className="nav-link">About</li> */}
               <Link className="nav-link" to={"/about"}>
                 About
               </Link>
-              {/* <li className="nav-link">Skills</li> */}
               <Link to={"/skills"} className="nav-link">
                 Skills
               </Link>
-              <li className="nav-link">Education</li>
-              <li className="nav-link">Experience</li>
-              <Link to={"/contact"}>Contact</Link>
-              {/* <li className="nav-link">Contact</li> */}
+              <Link to={"/projects"} className="nav-link">
+                Projects
+              </Link>
+              <Link to={"/contact"} className="nav-link">
+                Contact
+              </Link>
             </ul>
           </div>
         </nav>

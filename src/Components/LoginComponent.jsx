@@ -2,7 +2,7 @@ import React from "react";
 import HeaderComponent from "./HeaderComponent";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
-let renderCount = 0;
+// let renderCount = 0;
 
 const FormValues = {
   username: "string",
@@ -22,7 +22,7 @@ const LoginComponent = () => {
   });
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
-  renderCount++;
+  // renderCount++;
 
   // Validations for Forms Input Field
 
@@ -71,11 +71,11 @@ const LoginComponent = () => {
   return (
     <>
       <div>{<HeaderComponent />}</div>
-      <h4 className="text-xl">Render Count {renderCount / 2} </h4>
+      {/* <h4 className="text-xl">Render Count {renderCount / 2} </h4> */}
       <div id="MainForm" className="flex justify-around">
-        <div id="FormImgField">
+        {/* <div id="FormImgField">
           <p>Hello</p>
-        </div>
+        </div> */}
         <div id="FormLayouts" className="w-100">
           {/* <h4 className="text-xl font-extrabold text-blue-500">Contact Me</h4> */}
           <div>

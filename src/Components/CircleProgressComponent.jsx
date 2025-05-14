@@ -1,6 +1,6 @@
 import React from "react";
 
-const CircleProgressCpmponent = ({ percentage, color = "#3b82f6" }) => {
+const CircleProgressComponent = ({ percentage, color = "#3b82f6", value }) => {
   const radius = 40;
   const stroke = 8;
   const normalizedRadius = radius - stroke / 2;
@@ -42,4 +42,4 @@ const CircleProgressCpmponent = ({ percentage, color = "#3b82f6" }) => {
   );
 };
 
-export default CircleProgressCpmponent;
+export default CircleProgressComponent;

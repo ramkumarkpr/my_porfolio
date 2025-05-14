@@ -7,6 +7,7 @@ import MainContent from "./Components/MainContent.jsx";
 import AboutComponent from "./Components/AboutComponent.jsx";
 import LoginComponent from "./Components/LoginComponent.jsx";
 import SkillComponent from "./Components/SkillComponent.jsx";
+import ProjectsComponent from "./Components/ProjectsComponent.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/skills",
     element: <SkillComponent />,
+  },
+  {
+    path: "/projects",
+    element: <ProjectsComponent />,
   },
 ]);
 
