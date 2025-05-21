@@ -119,9 +119,11 @@ const LoginComponent = () => {
           viewport={{ once: true }}
         >
           <p className="text-white text-lg mb-6 max-w-2xl mx-auto text-justify">
-            Have a project in mind, want to collaborate, or just want to say
-            hello? I'm always open to new opportunities and conversations. Fill
-            out the form below and I'll get back to you soon!
+            I'm currently seeking a full-time opportunity as a Front-End
+            Developer. If you're hiring or know someone who is, I'd love to
+            connect! I'm also open to freelance projects, collaborations, or
+            tech discussions. Feel free to reach out using the form below – I'll
+            get back to you as soon as possible!
           </p>
           <form
             ref={formRef}

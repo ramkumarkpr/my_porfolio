@@ -22,8 +22,8 @@ const SkillComponent = ({ skillName, level, icon }) => {
 
       {/* Col - 1 */}
       <motion.section
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 10 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, easeInOut: "easeInOut" }}
         viewport={{ once: true }}
         className="flex justify-around py-5"

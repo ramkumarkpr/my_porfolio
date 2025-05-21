@@ -4,6 +4,8 @@ import Typed from "typed.js";
 import profileImage from "../assets/image/contact_profile.png";
 import { Link } from "react-router-dom";
 import "../styles/glow.css";
+import { motion } from "framer-motion";
+
 const TypeWritter = () => {
   const el = useRef(null);
   const typed = useRef(null);
@@ -105,12 +107,18 @@ const TypeWritter = () => {
             {/* <div className="py-2">{<ContactComponent />}</div> */}
           </div>
 
-          <div>
+          <motion.div
+            initial={{ x: 100, opacity: 0, scale: 0.8 }}
+            whileInView={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, rotate: 1 }}
+          >
             <img src={profileImage} className="w-100 p-3" alt="" />
             <p className="italic text-blue-400 font-bold text-center">
               “Code is like humor. When you have to explain it, it’s bad.”
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
