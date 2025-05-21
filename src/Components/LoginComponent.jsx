@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import contactProfile from "../assets/image/contact_Profile.png";
+import contactProfile from "../assets/image/contact_profile.png";
 import { useNavigate } from "react-router-dom";
 
 const LoginComponent = () => {
