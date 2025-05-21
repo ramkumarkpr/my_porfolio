@@ -23,13 +23,13 @@ body {
 }
 
 .insta-logo:hover {
-  color: #ec4899;
+  color: #c5e21f;
   transform: scale(1.1);
   transition: 0.7s;
 }
 
 .whatsapp-logo:hover {
-  color: green;
+  color: #3b82f6;
   transform: scale(1.1);
   transition: 0.7s;
 }

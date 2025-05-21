@@ -1,6 +1,8 @@
 import React from "react";
 import HeaderComponent from "./HeaderComponent";
 import ProjectCardComponent from "./ProjectCardComponent";
+import { motion } from "framer-motion";
+
 import project_1 from "../assets/image/project_1.png";
 import project_2 from "../assets/image/project_2.png";
 import project_3 from "../assets/image/project_3.png";
@@ -16,7 +18,6 @@ const ProjectsComponent = () => {
       image: project_1,
       link: "https://acsty-redesigned.netlify.app/",
     },
-
     {
       title: "ACSTY – Journal Publication Website (2)",
       description:
@@ -46,30 +47,70 @@ const ProjectsComponent = () => {
       link: "https://students-register-form.netlify.app/",
     },
   ];
+
   return (
     <>
       <section>
-        <div> {<HeaderComponent />} </div>
-      </section>
-
-      <section className="bg-black px-6 py-12">
-        <h2 className="text-3xl font-bold text-blue-500 mb-10 text-center">
-          Projects I've Built
-        </h2>
-        <p className="text-center py-5">
-          A collection of apps, websites, and experiments I've created with
-          passion and precision.
-        </p>
-
-        {/* Project Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-5 h-full">
-          {projects.map((project, index) => (
-            <ProjectCardComponent key={index} {...project} />
-          ))}
+        <div>
+          <HeaderComponent />
         </div>
       </section>
 
-      <section></section>
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="bg-black px-6 py-12"
+      >
+        <motion.h2
+          className="text-3xl font-bold text-blue-500 mb-10 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Projects I've Built
+        </motion.h2>
+
+        <motion.p
+          className="text-center py-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          A collection of apps, websites, and experiments I've created with
+          passion and precision.
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-5 h-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <ProjectCardComponent {...project} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
     </>
   );
 };

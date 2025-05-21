@@ -30,6 +30,14 @@ const router = createBrowserRouter([
     path: "/projects",
     element: <ProjectsComponent />,
   },
+  {
+    path: "/hire/me",
+    element: <LoginComponent />,
+  },
+  {
+    path: "/projects",
+    element: <ProjectsComponent />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(

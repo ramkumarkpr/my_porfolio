@@ -9,6 +9,7 @@ import ReactLogo from "../assets/image/react_logo.png";
 import GitLogo from "../assets/image/git_logo.png";
 import ApiLogo from "../assets/image/api_logo.png";
 import CircleProgressComponent from "./CircleProgressComponent";
+import { motion } from "framer-motion";
 
 const SkillComponent = ({ skillName, level, icon }) => {
   return (
@@ -20,9 +21,21 @@ const SkillComponent = ({ skillName, level, icon }) => {
       {/* Skills Section */}
 
       {/* Col - 1 */}
-      <section className="flex justify-around py-5">
+      <motion.section
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, easeInOut: "easeInOut" }}
+        viewport={{ once: true }}
+        className="flex justify-around py-5"
+      >
         {/* Technical Skill */}
-        <div className="flex flex-col gap-13  py-3 justify-center">
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="glowing-box flex flex-col gap-13  py-3 justify-center"
+        >
           {/* row -1 Tech Skills */}
           <h4 className="text-blue-500 text-xl font-bold">Technical Skills</h4>
 
@@ -127,13 +140,19 @@ const SkillComponent = ({ skillName, level, icon }) => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* col - 2 */}
 
         {/* Professional Skills */}
 
-        <div className="flex flex-col gap-20 py-3 items-center">
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="glowing-box flex flex-col gap-20 py-3 items-center"
+        >
           <h4 className="text-blue-500 text-xl font-bold">
             Professional Skills
           </h4>
@@ -172,8 +191,8 @@ const SkillComponent = ({ skillName, level, icon }) => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </>
   );
 };
