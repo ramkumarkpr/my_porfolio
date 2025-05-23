@@ -8,6 +8,7 @@ import project_2 from "../assets/image/project_2.png";
 import project_3 from "../assets/image/project_3.png";
 import project_4 from "../assets/image/project_4.png";
 import project_5 from "../assets/image/project_5.png";
+import project_6 from "../assets/image/project_6.png";
 
 const ProjectsComponent = () => {
   const projects = [
@@ -45,6 +46,13 @@ const ProjectsComponent = () => {
         "Built a student registration app with local storage and mock API integration, supporting add, view, and delete operations.",
       image: project_5,
       link: "https://students-register-form.netlify.app/",
+    },
+    {
+      title: "Student Data Hub",
+      description:
+        "The Student Data Hub is a responsive web application designed to manage and display student information efficiently. Built with modern front-end technologies, the platform allows users to view, add, update, and delete student records using a clean and intuitive user interface",
+      image: project_6,
+      link: "https://student-data-hub-phi.vercel.app/",
     },
   ];
 
@@ -85,7 +93,7 @@ const ProjectsComponent = () => {
         </motion.p>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-5 h-full"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 h-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -105,6 +113,7 @@ const ProjectsComponent = () => {
                 visible: { opacity: 1, scale: 1 },
               }}
               transition={{ duration: 0.5 }}
+              className="flex"
             >
               <ProjectCardComponent {...project} />
             </motion.div>

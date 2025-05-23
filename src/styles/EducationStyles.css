@@ -1,0 +1,44 @@
+/* EducationStyles.css */
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes stars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -10000px 5000px;
+  }
+}
+
+/* Twinkling stars background */
+.star-bg {
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-repeat: repeat;
+  animation: stars 200s linear infinite;
+}
+
+/* Glow effect for text */
+.glow-text {
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+}
+
+/* Glow effect for line */
+.glow-border {
+  border-left: 4px solid #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Glow pulse for diamonds */
+.glow-pulse {
+  box-shadow: 0 0 12px #3b82f6;
+  animation: twinkle 2s infinite ease-in-out;
+}

@@ -50,3 +50,74 @@ p {
   font-style: italic;
   line-height: height 1px;
 }
+
+/* Snowflake particle */
+@keyframes snowFall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px) translateX(10px);
+    opacity: 0;
+  }
+}
+
+/* Container for each link to hold snowflakes */
+.snow-hover {
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
+
+/* The snowflake elements */
+.snow-hover .snowflake {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation-name: snowFall;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Different delays and horizontal starting positions for natural effect */
+.snow-hover:hover .snowflake:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+  animation-duration: 1.2s;
+  opacity: 1;
+}
+
+.snow-hover:hover .snowflake:nth-child(2) {
+  left: 25%;
+  animation-delay: 0.3s;
+  animation-duration: 1.5s;
+  opacity: 1;
+}
+
+.snow-hover:hover .snowflake:nth-child(3) {
+  left: 45%;
+  animation-delay: 0.5s;
+  animation-duration: 1.4s;
+  opacity: 1;
+}
+
+.snow-hover:hover .snowflake:nth-child(4) {
+  left: 65%;
+  animation-delay: 0.7s;
+  animation-duration: 1.6s;
+  opacity: 1;
+}
+
+.snow-hover:hover .snowflake:nth-child(5) {
+  left: 85%;
+  animation-delay: 1s;
+  animation-duration: 1.3s;
+  opacity: 1;
+}

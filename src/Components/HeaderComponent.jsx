@@ -1,41 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/image/logo.png";
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import "../index.css";
 
 const HeaderComponent = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div>
-      {/* navbar */}
+    <header className="w-full bg-black text-white">
+      <nav className="flex justify-between items-center p-4 md:px-8">
+        {/* Logo Section */}
+        <div className="flex items-center gap-4">
+          <img src={logo} className="w-14 rounded-full" alt="Logo" />
+          <h4 className="text-xl md:text-2xl font-bold">RK</h4>
+        </div>
 
-      <div className="w-full bg-black">
-        <nav className="flex justify-between items-center p-3">
-          <div className="flex items-center gap-4">
-            <img src={logo} className="w-20 rounded-full" alt="" />
-            <h4 className="text-2xl logo-text font-bold">Unsullied Ram</h4>
-          </div>
+        <ul className="hidden md:flex gap-6 text-lg font-semibold">
+          {[
+            { to: "/", label: "Home" },
+            { to: "/about", label: "About" },
+            { to: "/skills", label: "Skills" },
+            { to: "/projects", label: "Projects" },
+            { to: "/contact", label: "Contact" },
+          ].map(({ to, label }) => (
+            <li key={to}>
+              <Link className="snow-hover" to={to}>
+                {label}
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="snowflake"></span>
+                ))}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-          <div className="">
-            <ul className="flex gap-6 text-[18px] font-bold">
-              <Link className="nav-link" to={"/"}>
-                Home
-              </Link>
-              <Link className="nav-link" to={"/about"}>
-                About
-              </Link>
-              <Link to={"/skills"} className="nav-link">
-                Skills
-              </Link>
-              <Link to={"/projects"} className="nav-link">
-                Projects
-              </Link>
-              <Link to={"/contact"} className="nav-link">
-                Contact
-              </Link>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
+        {/* Mobile Menu Button */}
+        <button onClick={toggleMenu} className="md:hidden">
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </nav>
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <ul className="md:hidden flex flex-col items-center bg-black gap-4 py-4 text-lg font-semibold">
+          <li>
+            <Link onClick={toggleMenu} className="hover:text-gray-400" to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={toggleMenu}
+              className="hover:text-gray-400"
+              to="/about"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={toggleMenu}
+              className="hover:text-gray-400"
+              to="/skills"
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={toggleMenu}
+              className="hover:text-gray-400"
+              to="/projects"
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={toggleMenu}
+              className="hover:text-gray-400"
+              to="/contact"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      )}
+    </header>
   );
 };
 
