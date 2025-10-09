@@ -56,6 +56,7 @@ const TypeWritter = () => {
                 "CSS3",
                 "JavaScript",
                 "React",
+                "My SQL",
                 "Tailwind CSS",
                 "Bootstrap",
                 "Git",

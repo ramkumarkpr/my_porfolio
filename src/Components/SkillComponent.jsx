@@ -8,9 +8,11 @@ import TwCssLogo from "../assets/image/tailwindcss_logo.png";
 import ReactLogo from "../assets/image/react_logo.png";
 import GitLogo from "../assets/image/git_logo.png";
 import ApiLogo from "../assets/image/api_logo.png";
+import SqlLogo from "../assets/image/mysql.png";
 import ClockComponent from "./ClockComponent";
 import { motion } from "framer-motion";
 import "../index.css";
+import { img, label } from "framer-motion/client";
 
 const SkillComponent = () => {
   return (
@@ -92,6 +94,12 @@ const SkillComponent = () => {
                   alt: "Rest API",
                   label: "Rest API",
                   desc: "Interface for web services",
+                },
+                {
+                  img: SqlLogo,
+                  alt: "SQL",
+                  label: "SQL",
+                  desc: "For Database",
                 },
               ].map(({ img, alt, label, desc }) => (
                 <div
