@@ -52,13 +52,16 @@ const TypeWritter = () => {
             {/* Skills */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:grid-cols-4 text-center py-6 text-sm text-gray-300">
               {[
+                "JAVA",
+                "React",
+                "SpringBoot",
+                "My SQL",
+                "JavaScript",
                 "HTML5",
                 "CSS3",
-                "JavaScript",
-                "React",
-                "My SQL",
                 "Tailwind CSS",
                 "Bootstrap",
+                "Github",
                 "Git",
                 "API Integration",
               ].map((skill, index) => (
@@ -75,7 +78,7 @@ const TypeWritter = () => {
             <div className="flex flex-wrap gap-4 py-5 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <span className="text-blue-400 text-xl">💼</span>
-                <span>6+ Months of Experience</span>
+                <span>6+ Months of Internship</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-blue-400 text-xl">📂</span>
