@@ -9,9 +9,19 @@ import project_3 from "../assets/image/project_3.png";
 import project_4 from "../assets/image/project_4.png";
 import project_5 from "../assets/image/project_5.png";
 import project_6 from "../assets/image/project_6.png";
+import project_7 from "../assets/image/institute.png";
 
 const ProjectsComponent = () => {
   const projects = [
+
+    {
+      title: "Institute Management Application - *Going ON* [Complete FullStack Application Using Java SpringBoot With SQL]",
+      description:
+        "The Institute Management Appliaction is a responsive web application designed to manage and display student information efficiently.[Ongoing Poject ]",
+      image: project_7,
+      link: "",
+    },
+
     {
       title: "ACSTY – Journal Publication Website",
       description:

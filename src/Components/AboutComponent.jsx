@@ -35,7 +35,7 @@ const AboutComponent = () => {
                     <span className="text-blue-500 font-semibold">
                       Ramkumar
                     </span>
-                    , a passionate Front-End Developer from{" "}
+                    , a passionate FullStack Developer from{" "}
                     <span className="text-blue-500">Tenkasi</span>. My journey
                     into web development began with YouTube tutorials and
                     W3Schools. With{" "}
@@ -44,7 +44,7 @@ const AboutComponent = () => {
                     </span>
                     , I specialize in{" "}
                     <span className="text-blue-500">
-                      React, JavaScript, Tailwind CSS, Bootstrap, HTML, and CSS
+                      Java, SQL, React, JavaScript, Tailwind CSS, Bootstrap, HTML, and CSS
                     </span>
                     .
                   </>,
@@ -54,7 +54,7 @@ const AboutComponent = () => {
                     designs. I'm always exploring new tools to grow my skillset.
                   </>,
                   <>
-                    My goal is to become a{" "}
+                    My goal is to become a Complete{" "}
                     <span className="text-blue-500">
                       Java Full Stack Developer
                     </span>{" "}

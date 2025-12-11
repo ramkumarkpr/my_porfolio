@@ -9,6 +9,7 @@ import ReactLogo from "../assets/image/react_logo.png";
 import GitLogo from "../assets/image/git_logo.png";
 import ApiLogo from "../assets/image/api_logo.png";
 import SqlLogo from "../assets/image/mysql.png";
+import JavaLogo from "../assets/image/java.png";
 import ClockComponent from "./ClockComponent";
 import { motion } from "framer-motion";
 import "../index.css";
@@ -47,6 +48,12 @@ const SkillComponent = () => {
 
             <div className="flex flex-wrap justify-center md:justify-start gap-8">
               {[
+                {
+                  img: JavaLogo,
+                  alt: "JAVA",
+                  label: "JAVA",
+                  desc: "JAVA",
+                },
                 {
                   img: HtmlLogo,
                   alt: "HTML",

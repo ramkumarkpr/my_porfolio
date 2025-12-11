@@ -13,10 +13,10 @@ const TypeWritter = () => {
     typed.current = new Typed(el.current, {
       strings: [
         "Ram kumar",
-        "a Front-End Developer",
+        "a FullStack Developer",
         "a Passionate Coder",
         "a Tailwind CSS Ninja",
-        "an API Integrator",
+        "a API Integrator",
         "a React Explorer",
         "a Problem Solver",
       ],
