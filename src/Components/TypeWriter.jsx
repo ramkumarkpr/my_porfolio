@@ -42,7 +42,7 @@ const TypeWritter = () => {
             <p className="text-justify text-sm md:text-base">
               A passionate{" "}
               <span className="text-blue-500 font-bold">
-                Front-End Developer
+                FullStack Developer
               </span>{" "}
               dedicated to crafting engaging and responsive user interfaces. I
               specialize in turning ideas into beautifully functional websites
